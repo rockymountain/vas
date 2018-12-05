@@ -463,6 +463,13 @@ export class MenuConfig implements ConfigModel {
 						badge: {type: 'm-badge--danger', value: '2'},
 						translate: 'MENU.DASHBOARD'
 					},
+					{
+						title: 'Students', // <= Title of the page
+						desc: 'Students page contains students information', // <= Description of the page
+						root: true,
+						page: '/students', // <= URL
+						icon: 'flaticon-line-graph' // <= Choose the icon
+					   },
 					{section: 'Tools'},
 					{
 						title: 'Layout Builder',

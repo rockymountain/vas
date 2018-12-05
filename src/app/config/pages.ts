@@ -11,6 +11,9 @@ export class PagesConfig implements ConfigModel {
 					desc: 'Latest updates and statistic charts'
 				}
 			},
+			'students': { // <= add page URL
+				page: { title: 'Students', desc: 'Students desc' } // <= Page name and description
+			  },
 			builder: {
 				page: { title: 'Layout Builder', desc: 'Layout builder' }
 			},

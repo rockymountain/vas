@@ -6,6 +6,7 @@ import { NgxPermissionsGuard } from 'ngx-permissions';
 import { ProfileComponent } from './header/profile/profile.component';
 import { ErrorPageComponent } from './snippets/error-page/error-page.component';
 import { InnerComponent } from "./components/inner/inner.component";
+import { StudentsComponent } from './students/students.component';
 
 const routes: Routes = [
 	{
@@ -25,6 +26,10 @@ const routes: Routes = [
 				path: '',
 				loadChildren: './components/dashboard/dashboard.module#DashboardModule'
 			},
+			{
+				path: 'students', // <= Page URL
+				component: StudentsComponent // <= Page component registration
+			  },
 			{
 				path: 'builder',
 				loadChildren: './builder/builder.module#BuilderModule'
