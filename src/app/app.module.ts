@@ -41,6 +41,13 @@ import { DataTableService } from './core/services/datatable.service';
 
 import 'hammerjs';
 
+// firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	// suppressScrollX: true
 };
@@ -61,6 +68,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		NgbModule.forRoot(),
 		TranslateModule.forRoot(),
 		MatProgressSpinnerModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+		AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+		// AngularFireStorageModule // imports firebase/storage only needed for storage features
 	],
 	providers: [
 		AclService,
